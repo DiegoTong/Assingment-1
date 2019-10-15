@@ -1,8 +1,9 @@
 #pragma once
 #include "GameCharacter.h"
-class Player :
-	public GameCharacter
+class Player : public GameCharacter
 {
-	void update() const;
+	void update();
+	enum movement{UP=1,DOWN,LEFT,RIGHT};
+	int move;
 };
 

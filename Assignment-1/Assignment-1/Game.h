@@ -15,7 +15,10 @@ public:
 	void clean();
 	void updateGrid();
 	void printGrid();
+	void checkGameOver();
+private:
 	list<GameCharacter*> lsGameCharacters;
 	char grid[12][12];
+	bool gameOver;
 };
 
