@@ -5,6 +5,7 @@ using namespace std;
 class GameCharacter
 {
 public:
+	virtual void update(); //virtual function
 	void spawn(string typeID, int health, int speed, int x, int y); // create an object
 	void render();// virtual function
 	void stats();// print all stats relating to the object

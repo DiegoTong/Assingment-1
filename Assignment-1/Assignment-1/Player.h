@@ -3,6 +3,6 @@
 class Player :
 	public GameCharacter
 {
-	virtual void update() const;
+	void update() const;
 };
 

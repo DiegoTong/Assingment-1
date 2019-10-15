@@ -1,4 +1,2 @@
-﻿  Enemy.cpp
-C:\Users\student\Desktop\Game_Programing\Repo\Assignment-1\Assignment-1\Enemy.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\student\Desktop\Game_Programing\Repo\Assignment-1\Assignment-1\Enemy.cpp(17,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  main.cpp
   Assignment-1.vcxproj -> C:\Users\student\Desktop\Game_Programing\Repo\Assignment-1\Debug\Assignment-1.exe

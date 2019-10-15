@@ -1,9 +1,15 @@
-#include "Enemy.h"
 #include "Game.h"
 int main()
 {
+	char userInput = 'y';
 	Game oGame;
-
-	oGame.init();
-	std::cout << "Hello World!\n";
+	string playerID;
+	cin >> playerID;
+	oGame.init(&playerID);
+	while (userInput != 'n')
+	{
+		oGame.update();
+		cin >> userInput;
+	}
+	return 0;
 }
