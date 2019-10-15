@@ -1,19 +1,19 @@
 #include "Game.h"
-void init()
+void Game::init()
 {
 }
-void render()
+void Game::render()
 {
 }
-void update()
+void Game::update()
 {
 }
-void battle()
+void Game::battle()
 {
 }
-void stats()
+void Game::stats()
 {
 }
-void clean()
+void Game::clean()
 {
 }

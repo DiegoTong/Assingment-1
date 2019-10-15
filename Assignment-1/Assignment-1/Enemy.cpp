@@ -1,10 +1,11 @@
 #include "Enemy.h"
+#include <ctime>
 
-void update()
+void Enemy::update() const
 {
 	// Movement Randomizer
 	srand(time(NULL));
-	int randNum = rand() % 10+1;
+	int randNum = (rand() % 10 + 1);
 	if (randNum <9)
 	{
 		// Move x by 1
@@ -13,9 +14,9 @@ void update()
 	{
 		// move x reverse
 	}
-
 	srand(time(NULL));
-	randNum = rand() % 10 + 1;
+    randNum = (rand() % 10 + 1);
+
 	if (randNum < 9)
 	{
 		// Move y by 1

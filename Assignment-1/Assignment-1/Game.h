@@ -1,5 +1,7 @@
 #pragma once
 #include "List"
+#include "Enemy.h"
+#include "Player.h"
 class Game
 {
 public:
@@ -11,5 +13,12 @@ public:
 	void battle();
 	void stats();
 	void clean();
+protected:
+	Enemy* enemy1;
+	Enemy* enemy2;
+	Enemy* enemy3;
+	Enemy* enemy4;
+	Player* player;
+	list<GameCharacter> lsGameCharacters;
 };
 

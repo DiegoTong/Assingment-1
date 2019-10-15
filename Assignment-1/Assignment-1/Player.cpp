@@ -1,6 +1,6 @@
 #include "Player.h"
 
-void update()
+void Player::update()const
 {
 	cout << "Input W/A/S/D to move" << endl;
 	srand(time(NULL));
