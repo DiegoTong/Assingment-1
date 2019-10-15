@@ -4,7 +4,6 @@ class Enemy : public GameCharacter
 {
 	
 public:
-	virtual void update() const;
-
+	virtual void update(GameCharacter playerLocation);
 };
 

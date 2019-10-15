@@ -1,11 +1,15 @@
 #pragma once
 #include <iostream>
-#include <time.h>
+#include <ctime>
 using namespace std;
 class GameCharacter
 {
 public:
 	virtual void update(); //virtual function
+	int randomizer();
+	GameCharacter chase(GameCharacter player);
+	virtual void movement();
+	void check_walls();
 	void spawn(string typeID, int health, int speed, int x, int y); // create an object
 	void render();// virtual function
 	void stats();// print all stats relating to the object

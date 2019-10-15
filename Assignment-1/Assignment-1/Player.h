@@ -3,7 +3,9 @@
 class Player : public GameCharacter
 {
 	void update();
-	enum movement{UP=1,DOWN,LEFT,RIGHT};
+	void movement();
+private:
+	enum direction{UP=1,DOWN,LEFT,RIGHT};
 	int move;
 };
 

@@ -4,6 +4,18 @@ void GameCharacter::update()
 
 
 }
+void GameCharacter::movement()
+{
+
+
+}
+int GameCharacter::randomizer()
+{
+	srand(time(NULL));
+	int randNum = rand() % 10 + 1;
+	return randNum;
+
+}
 void GameCharacter::spawn(string typeID, int health, int speed, int x, int y)
 {
 	m_typeID = typeID;
@@ -41,4 +53,32 @@ int GameCharacter::get_yValue()
 char GameCharacter::get_firstCharacter()
 {
 	return m_typeID[0];
+}
+void GameCharacter::check_walls()
+{
+	if (m_y > 11)
+	{
+		cout << "You made an illegal choice." << endl;
+		m_y = 11;
+	}
+	if (m_x > 11)
+	{
+		cout << "You made an illegal choice." << endl;
+		m_x = 11;
+	}
+	if (m_y < 0)
+	{
+		cout << "You made an illegal choice." << endl;
+		m_y = 0;
+	}
+	if (m_x < 0)
+	{
+		cout << "You made an illegal choice." << endl;
+		m_x = 0;
+	}
+}
+
+GameCharacter GameCharacter::chase(GameCharacter player)
+{
+	return player;
 }

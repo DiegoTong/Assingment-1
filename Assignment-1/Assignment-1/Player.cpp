@@ -11,7 +11,14 @@
 void Player::update()
 {
 	cout << "Input W/A/S/D to move" << endl;
+	movement();
+	check_walls();
+}
 
+
+
+void Player::movement()
+{
 	cin >> move;
 	switch (move)
 	{
@@ -31,9 +38,8 @@ void Player::update()
 	default:
 		cout << "You made an illegal choice." << endl;
 	}
-	srand(time(NULL));
-	int randNum = rand() % 10 + 1;
-	if (randNum < 9)
+
+	if (randomizer() < 9)
 	{
 		// Move x by 1
 	}
@@ -44,9 +50,8 @@ void Player::update()
 
 	// If they hit a perimeter, the player stops moving
 
-	srand(time(NULL));
-	randNum = rand() % 10 + 1;
-	if (randNum < 9)
+
+	if (randomizer() < 9)
 	{
 		// Move y by 1
 	}
@@ -55,3 +60,4 @@ void Player::update()
 		// move y reverse
 	}
 }
+
