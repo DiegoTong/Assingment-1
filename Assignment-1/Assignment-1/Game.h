@@ -11,11 +11,12 @@ public:
 	void render();
 	void update();
 	void battle();
-	void stats();
 	void clean();
 	void updateGrid();
 	void printGrid();
 	void checkGameOver();
+	void gameLoop();
+	bool typeMatch(int attacker, int defender);
 private:
 	list<GameCharacter*>::const_iterator iter;
 	list<GameCharacter*> lsGameCharacters;

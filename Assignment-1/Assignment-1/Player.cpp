@@ -1,18 +1,11 @@
 #include "Player.h"
-//Player::Player(const Player& c)
-//{
-//	m_typeID = c.m_typeID;
-//	m_health = c.m_health;
-//	m_speed = c.m_speed;
-//	m_x = c.m_x;
-//	m_y = c.m_y;
-//}
 
 void Player::update()
 {
-	cout << "Input W/A/S/D to move" << endl;
+	cout << "Input 1/2/3/4 to move or 5 to change type" << endl;
 	movement();
 	check_walls();
+	m_health--;
 }
 
 
@@ -20,6 +13,16 @@ void Player::update()
 void Player::movement()
 {
 	cin >> move;
+	while (!cin.good())
+	{
+		cout << "You made an illegal choice." << endl;
+		cout << "Input 1/2/3/4 to move or 5 to change type" << endl;
+		cin.clear();
+		cin.ignore(10000, '\n');
+		move = 0;
+		cin >> move;
+		system("CLS");
+	}
 	switch (move)
 	{
 	case UP:
@@ -35,29 +38,24 @@ void Player::movement()
 	case RIGHT:
 		m_x += 1;
 		break;
+	case CHANGE:
+		cout << "Choose your type: ROCK = 0/ PAPER = 1/ SCISSORS = 2" << endl;
+		cin >> move;
+		while (!cin.good())
+		{
+			cout << "You made an illegal choice." << endl;
+			cout << "Choose your type: ROCK = 0/ PAPER = 1/ SCISSORS = 2" << endl;
+			cin.clear();
+			cin.ignore(10000, '\n');
+			move = 0;
+			cin >> move;
+			system("CLS");
+		}
+			type = move;
+		m_health = m_health - 19;
+		break;
 	default:
-		cout << "You made an illegal choice." << endl;
-	}
-
-	if (randomizer() < 9)
-	{
-		// Move x by 1
-	}
-	else
-	{
-		// move x reverse
-	}
-
-	// If they hit a perimeter, the player stops moving
-
-
-	if (randomizer() < 9)
-	{
-		// Move y by 1
-	}
-	else
-	{
-		// move y reverse
+		break;
 	}
 }
 
